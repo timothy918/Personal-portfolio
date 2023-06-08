@@ -1,0 +1,95 @@
+<!-- File name: contact.ejs
+Student name: Timothy, KWOK Ting Hei
+Student ID: 301246247
+Date: 29-May-2023 -->
+<%- include ('partials/header.ejs') %> <%- include ('partials/main_nav.ejs') %>
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to <%= title %> page</h1>
+    <form action="/submit" method="post">
+      <!-- <form action="mailto:tkwok15@my.centennialcollege.ca" method="post"> -->
+      <fieldset>
+        <legend>Send me an email</legend>
+        <label for="bFirstName">Perfered Name</label>
+        <input
+          id="bFirstName"
+          type="text"
+          name="bFirstName"
+          size="20"
+          placeholder="Perfered Name"
+        />
+        <br />
+        <label for="bListName">Surname</label>
+        <input
+          id="bListName"
+          type="text"
+          name="bListName"
+          size="20"
+          placeholder="Surname"
+        /><br />
+        <label for="bEmailAddress">Email Address</label>
+        <input
+          id="bEmailAddress"
+          type="text"
+          name="bEmailAddress"
+          size="20"
+          placeholder="Email address"
+          required="required"
+        />
+        <br />
+        <label for="bPhone">Phone</label>
+        <input
+          id="bPhone"
+          type="number"
+          name="bPhone"
+          placeholder="Phone number"
+          required="required"
+        /><br />
+        <label for="bSubject">Subject</label>
+        <input
+          id="bSubject"
+          type="text"
+          name="bSubject"
+          size="55"
+          placeholder="Subject"
+          required="required"
+        />
+        <br />
+        <label for="bMessage">Message</label>
+        <textarea
+          name="bMessage"
+          id="bMessage"
+          cols="54"
+          rows="8"
+          placeholder="Message"
+        ></textarea>
+      </fieldset>
+      <input name="Submit" type="submit" id="Submit" />
+      <input name="Reset" type="reset" id="Reset" />
+    </form>
+    <p>
+      <figure>
+        <img src="/img/envelope.svg" alt="general bookkeeping" class="icons" />
+        <figcaption>Email : heititanic@gmail.com</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/phone.svg" alt="general bookkeeping" class="icons" />
+        <figcaption>Phone: (647)460-7732</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/linkedin.svg" alt="general bookkeeping" class="icons" />
+        <figcaption>LinkedIn: 010721185</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/github.svg" alt="general bookkeeping" class="icons" />
+        <figcaption>Github: timothy918</figcaption>
+      </figure>
+    </p>
+  </div>
+</main>
+
+<!--bottom nav-->
+
+<!--script section-->
+<%- include ('partials/bottom_nav.ejs') %> <%- include ('partials/footer.ejs')%>

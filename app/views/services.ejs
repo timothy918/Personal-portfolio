@@ -1,0 +1,66 @@
+<!-- File name: services.ejs
+Student name: Timothy, KWOK Ting Hei
+Student ID: 301246247
+Date: 29-May-2023 -->
+<%- include ('partials/header.ejs') %> <%- include ('partials/main_nav.ejs') %>
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to <%= title %> page</h1>
+    <p>
+      I am available to provide a wide range of services from accounting to
+      software engineering, including but not limited to:
+    </p>
+    <div id="flex-container">
+      <figure>
+        <img
+          src="/img/bookkeeping.png"
+          alt="general bookkeeping"
+          class="icons"
+        />
+        <figcaption>general<br />bookkeeping</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/finance.png" alt="general bookkeeping" class="icons" />
+        <figcaption>daily<br />finance<br />activities</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/audit.png" alt="general bookkeeping" class="icons" />
+        <figcaption>statutory<br />audit</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/credit.png" alt="general bookkeeping" class="icons" />
+        <figcaption>credit<br />control</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/business.png" alt="general bookkeeping" class="icons" />
+        <figcaption>business<br />intelligence<br />analytics</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="/img/programming.png"
+          alt="general bookkeeping"
+          class="icons"
+        />
+        <figcaption>general<br />programming</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="/img/data-structure.png"
+          alt="general bookkeeping"
+          class="icons"
+        />
+        <figcaption>data<br />structure</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/web.png" alt="general bookkeeping" class="icons" />
+        <figcaption>web<br />development</figcaption>
+      </figure>
+    </div>
+  </div>
+</main>
+<!--bottom nav-->
+
+<!--script section-->
+<%- include ('partials/bottom_nav.ejs') %> <%- include ('partials/footer.ejs')
+%>
