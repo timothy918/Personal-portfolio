@@ -21,3 +21,17 @@ module.exports = router;
 router.post("/submit", function (req, res, next) {
   res.redirect("/");
 });
+// function sendEmail(event) {
+//   event.preventDefault(); // Prevents the form from submitting normally
+//   // Redirect to home page
+//   window.location.href = "/";
+//   // Send email
+//   const form = document.querySelector("form");
+//   const formData = new FormData(form);
+//   const email = "mailto:tkwok15@my.centennialcollege.ca";
+//   const subject = encodeURIComponent(formData.get("bSubject"));
+//   const body = encodeURIComponent(formData.get("bMessage"));
+//   const mailtoLink = `${email}?subject=${subject}&body=${body}`;
+//   // Open the email client
+//   window.open(mailtoLink);
+// }

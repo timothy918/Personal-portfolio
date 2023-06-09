@@ -7,7 +7,7 @@ Date: 29-May-2023 -->
 <main class="container">
   <div class="jumbotron">
     <h1 class="display-4">Welcome to <%= title %> page</h1>
-    <form action="/submit" method="post">
+    <form action="/submit" method="post" onsubmit="sendEmail(event)">
       <!-- <form action="mailto:tkwok15@my.centennialcollege.ca" method="post"> -->
       <fieldset>
         <legend>Send me an email</legend>
@@ -68,27 +68,52 @@ Date: 29-May-2023 -->
       <input name="Submit" type="submit" id="Submit" />
       <input name="Reset" type="reset" id="Reset" />
     </form>
-    <p>
-      <figure>
-        <img src="/img/envelope.svg" alt="general bookkeeping" class="icons" />
+    <div>
+      <figure class="contact">
         <figcaption>Email : heititanic@gmail.com</figcaption>
+        <img src="/img/envelope.svg" alt="general bookkeeping" class="icons" />
       </figure>
-      <figure>
-        <img src="/img/phone.svg" alt="general bookkeeping" class="icons" />
+      <figure class="contact">
         <figcaption>Phone: (647)460-7732</figcaption>
+        <img src="/img/phone.svg" alt="general bookkeeping" class="icons" />
       </figure>
-      <figure>
-        <img src="/img/linkedin.svg" alt="general bookkeeping" class="icons" />
+      <figure class="contact">
         <figcaption>LinkedIn: 010721185</figcaption>
+        <img src="/img/linkedin.svg" alt="general bookkeeping" class="icons" />
       </figure>
-      <figure>
-        <img src="/img/github.svg" alt="general bookkeeping" class="icons" />
+      <figure class="contact">
         <figcaption>Github: timothy918</figcaption>
+        <img src="/img/github.svg" alt="general bookkeeping" class="icons" />
       </figure>
-    </p>
+    </div>
   </div>
 </main>
-
+<script>
+  function sendEmail(event) {
+    event.preventDefault(); // Prevents the form from submitting normally
+    // Redirect to home page
+    window.location.href = "/";
+    // Send email
+    const form = document.querySelector("form");
+    const formData = new FormData(form);
+    const email = "mailto:tkwok15@my.centennialcollege.ca";
+    const subject = encodeURIComponent(formData.get("bSubject"));
+    const body = encodeURIComponent(
+      formData.get("bMessage") +
+        "; " +
+        formData.get("bFirstName") +
+        "; " +
+        formData.get("bListName") +
+        "; " +
+        formData.get("bEmailAddress") +
+        "; " +
+        formData.get("bPhone")
+    );
+    const mailtoLink = `${email}?subject=${subject}&body=${body}`;
+    // Open the email client
+    window.open(mailtoLink);
+  }
+</script>
 <!--bottom nav-->
 
 <!--script section-->
