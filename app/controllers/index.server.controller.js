@@ -5,6 +5,6 @@
 
 exports.render = function (req, res) {
   res.render("index", {
-    title: "Hello World",
+    title: "Hire Timothy K.",
   });
 };
