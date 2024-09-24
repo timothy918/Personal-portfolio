@@ -22,10 +22,10 @@ router.get("/contact", function (req, res, next) {
 router.get("/services", function (req, res, next) {
   res.render("services", { title: "Services" });
 });
-module.exports = router;
-router.post("/submit", function (req, res, next) {
-  res.redirect("/");
-});
+// module.exports = router;
+// router.post("/submit", function (req, res, next) {
+//   res.redirect("/");
+// });
 // function sendEmail(event) {
 //   event.preventDefault(); // Prevents the form from submitting normally
 //   // Redirect to home page
