@@ -7,11 +7,35 @@ Date: 29-May-2023 -->
 <main class="container">
   <div class="jumbotron">
     <h1 class="display-4">Welcome to <%= title %> page</h1>
-    <a href="https://mastermind2-chaotic-evil.web.app/statistics.html">
-      <figure>
-        <img src="/img/MasterMind2.png" alt="MasterMind2" class="projectPics" />
-        <figcaption>MasterMind 2: Chaotic Evil</figcaption>
-      </figure>
+    <h3 class="project-title">Web development:</h3>
+    <a
+      href="https://mastermind2-chaotic-evil.web.app/statistics.html"
+      class="project-card">
+      <div class="card">
+        <!-- Text on the left -->
+        <div class="card-info">
+          <h3 class="project-title">MasterMind 2: Chaotic Evil</h3>
+          <p class="project-p">
+            A JavaScript board game; featuring,<br />
+            FireStore NoSQL database; and, <br />
+            data visualization using Chart.js.
+          </p>
+        </div>
+        <!-- Images on the right -->
+        <div class="card-image-container">
+          <iframe
+            class="project-video"
+            src="https://www.youtube.com/embed/7uLPT4NDlpg"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <img
+            src="/img/MasterMind2.png"
+            alt="MasterMind2"
+            class="project-thumbnail" />
+        </div>
+      </div>
     </a>
     <br />
     <a

@@ -46,6 +46,7 @@ ul.navbar-max {
 }
 ul.navbar-max li {
   display: inline-block; /* Make the list items display inline */
+  margin: 5px;
 }
 a:link {
   text-decoration: none;
@@ -79,4 +80,87 @@ footer {
 }
 footer .navbar-text {
   margin-bottom: 0;
+}
+.project-card .card {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  display: flex; /* Ensure the card uses flexbox for layout */
+  align-items: flex-start; /* Align items at the top of their container */
+  padding: 15px;
+  width: 100%; /* Full width for the card */
+  box-sizing: border-box; /* Include padding in the width */
+  flex-direction: row !important; /* Stack text and images vertically on small screens */
+}
+
+.card-image-container {
+  display: flex; /* Use flexbox for the image container */
+  gap: 10px; /* Space between the video and the image */
+  align-items: center; /* Center the images vertically */
+}
+
+/* Thumbnail image styling */
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* YouTube video styling */
+.project-video {
+  width: 100%;
+  height: 170px; /* Adjust height as needed */
+  border-radius: 10px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Images (thumbnail and video) on the right */
+.card-image-container {
+  display: flex;
+  flex-direction: row; /* Stack the image and video vertically */
+  gap: 10px; /* Space between the image and video */
+  flex: 2; /* Image section takes up less space */
+  max-width: 350px; /* Set a max width for the images */
+  align-items: flex-end; /* Align images to the right side of the container */
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Stack text and images vertically on small screens */
+  }
+
+  .card-info {
+    text-align: center; /* Center align text on smaller screens */
+    padding-right: 0;
+    margin-bottom: 15px; /* Add space between text and images */
+  }
+
+  .card-image-container {
+    align-items: center; /* Center align images on smaller screens */
+    width: 100%;
+    max-width: 100%;
+  }
 }
