@@ -5,48 +5,102 @@ Date: 29-May-2023 -->
 <%- include ('partials/header.ejs') %> <%- include ('partials/main_nav.ejs') %>
 
 <main class="container">
-  <div class="jumbotron">
-    <h1 class="display-4">Welcome to <%= title %> page</h1>
-    <h3 class="project-title">Web development:</h3>
-    <a
-      href="https://mastermind2-chaotic-evil.web.app/statistics.html"
-      class="project-card">
-      <div class="card">
-        <!-- Text on the left -->
-        <div class="card-info">
-          <h3 class="project-title">MasterMind 2: Chaotic Evil</h3>
-          <p class="project-p">
-            A JavaScript board game; featuring,<br />
-            FireStore NoSQL database; and, <br />
-            data visualization using Chart.js.
-          </p>
+  <h1 class="display-4">Welcome to <%= title %> page</h1>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link <%= activeTab === 'webdev' ? 'active' : '' %>"
+        id="webdev-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#webdev"
+        type="button"
+        role="tab"
+        aria-controls="webdev"
+        aria-selected="<%= activeTab === 'webdev' %>">
+        Web Development
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link <%= activeTab === 'genprog' ? 'active' : '' %>"
+        id="genprog-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#genprog"
+        type="button"
+        role="tab"
+        aria-controls="genprog"
+        aria-selected="<%= activeTab === 'genprog' %>">
+        General Programming
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link <%= activeTab === 'dataanalysis' ? 'active' : '' %>"
+        id="dataanalysis-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#dataanalysis"
+        type="button"
+        role="tab"
+        aria-controls="dataanalysis"
+        aria-selected="<%= activeTab === 'dataanalysis' %>">
+        Data Analysis
+      </button>
+    </li>
+  </ul>
+  <!-- Tab content -->
+  <div class="tab-content" id="myTabContent">
+    <!-- Web Development Tab -->
+    <div
+      class="tab-pane fade <%= activeTab === 'webdev' ? 'show active' : '' %>"
+      id="webdev"
+      role="tabpanel"
+      aria-labelledby="webdev-tab">
+      <a
+        href="https://mastermind2-chaotic-evil.web.app/statistics.html"
+        class="project-card">
+        <div class="card">
+          <!-- Text on the left -->
+          <div class="card-info">
+            <h3 class="project-title">MasterMind 2: Chaotic Evil</h3>
+            <p class="project-p">
+              A JavaScript board game; featuring,<br />
+              FireStore NoSQL database; and, <br />
+              data visualization using Chart.js.
+            </p>
+          </div>
+          <!-- Images on the right -->
+          <div class="card-image-container">
+            <iframe
+              class="project-video"
+              src="https://www.youtube.com/embed/7uLPT4NDlpg"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            <img
+              src="/img/MasterMind2.png"
+              alt="MasterMind2"
+              class="project-thumbnail" />
+          </div>
         </div>
-        <!-- Images on the right -->
-        <div class="card-image-container">
-          <iframe
-            class="project-video"
-            src="https://www.youtube.com/embed/7uLPT4NDlpg"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-          <img
-            src="/img/MasterMind2.png"
-            alt="MasterMind2"
-            class="project-thumbnail" />
-        </div>
-      </div>
-    </a>
-    <br />
-    <a
-      href="http://studentweb.cencol.ca/tkwok15/COMP125/assignment4/index.html">
-      <figure>
-        <img src="/img/assignment4.png" alt="assignment4" class="projectPics" />
-        <figcaption>
-          Semester2 COMP125 Client-Side Development assignment4
-        </figcaption>
-      </figure>
-    </a>
+      </a>
+    </div>
+    <!-- General Programming Tab -->
+    <div
+      class="tab-pane fade <%= activeTab === 'genprog' ? 'show active' : '' %>"
+      id="genprog"
+      role="tabpanel"
+      aria-labelledby="genprog-tab">
+      coming soon
+    </div>
+    <!-- Data Analysis Tab -->
+    <div
+      class="tab-pane fade <%= activeTab === 'dataanalysis' ? 'show active' : '' %>"
+      id="dataanalysis"
+      role="tabpanel"
+      aria-labelledby="dataanalysis-tab">
+      VAR project coming soon
+    </div>
   </div>
 </main>
 <!--bottom nav-->

@@ -98,7 +98,7 @@ footer .navbar-text {
   display: flex; /* Ensure the card uses flexbox for layout */
   align-items: flex-start; /* Align items at the top of their container */
   padding: 15px;
-  width: 100%; /* Full width for the card */
+  width: 80%; /* Full width for the card */
   box-sizing: border-box; /* Include padding in the width */
   flex-direction: row !important; /* Stack text and images vertically on small screens */
 }

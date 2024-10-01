@@ -10,19 +10,22 @@ var router = express.Router();
 router.get("/", function (req, res, next) {
   res.render("index", { title: "Hire Timothy K." });
 });
-router.get("/about", function (req, res, next) {
-  res.render("about", { title: "About" });
-});
 router.get("/projects", function (req, res, next) {
-  res.render("projects", { title: "Projects" });
-});
-router.get("/contact", function (req, res, next) {
-  res.render("contact", { title: "Contact" });
-});
-router.get("/services", function (req, res, next) {
-  res.render("services", { title: "Services" });
+  // Get the query parameter from the URL (e.g. ?tab=genprog)
+  const activeTab = req.query.tab || "webdev"; // Default to 'webdev' if no tab is specified
+  res.render("projects", { title: "Projects", activeTab });
 });
 module.exports = router;
+
+// router.get("/about", function (req, res, next) {
+//   res.render("about", { title: "About" });
+// });
+// router.get("/contact", function (req, res, next) {
+//   res.render("contact", { title: "Contact" });
+// });
+// router.get("/services", function (req, res, next) {
+//   res.render("services", { title: "Services" });
+// });
 // router.post("/submit", function (req, res, next) {
 //   res.redirect("/");
 // });
