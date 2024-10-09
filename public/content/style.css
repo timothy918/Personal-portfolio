@@ -98,11 +98,17 @@ footer .navbar-text {
   display: flex; /* Ensure the card uses flexbox for layout */
   align-items: flex-start; /* Align items at the top of their container */
   padding: 15px;
-  width: 80%; /* Full width for the card */
+  width: 90%;
   box-sizing: border-box; /* Include padding in the width */
   flex-direction: row !important; /* Stack text and images vertically on small screens */
 }
-
+.tab-pane {
+  padding: 1%;
+}
+.tab-centent {
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
 .card-image-container {
   display: flex; /* Use flexbox for the image container */
   gap: 10px; /* Space between the video and the image */
