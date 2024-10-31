@@ -1,6 +1,3 @@
-// Student name: Timothy, KWOK Ting Hei
-// Student ID: 301246247
-// Date: 29-May-2023
 var express = require("express"),
   morgan = require("morgan"),
   compress = require("compression"),
@@ -24,8 +21,10 @@ module.exports = function () {
   app.use(methodOverride());
   app.set("views", "./app/views");
   app.set("view engine", "ejs");
+
   app.use("/", require("../app/routes/index.server.routes.js"));
-  //require('../app/routes/index.server.routes.js')(app);
+  // app.use("/yahoo", require("../app/routes/yahoo.server.routes.js"));
+
   app.use(express.static("./public"));
   app.use(express.static("./node_modules"));
 

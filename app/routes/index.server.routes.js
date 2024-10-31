@@ -15,6 +15,11 @@ router.get("/projects", function (req, res, next) {
   const activeTab = req.query.tab || "webdev"; // Default to 'webdev' if no tab is specified
   res.render("projects", { title: "Projects", activeTab });
 });
+router.get("/logisticRegression", function (req, res, next) {
+  res.render("logisticRegression", {
+    title: "Optimizing Trading Strategies",
+  });
+});
 module.exports = router;
 
 // router.get("/about", function (req, res, next) {
