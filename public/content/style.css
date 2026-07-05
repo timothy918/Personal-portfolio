@@ -94,6 +94,22 @@ footer .navbar-text {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Hover effect for the 3 linked service icons (only the image lifts up) */
+a.nav-link:hover img.icons {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+a.nav-link:hover figcaption {
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+
 .card {
   display: flex; /* Ensure the card uses flexbox for layout */
   align-items: flex-start; /* Align items at the top of their container */
